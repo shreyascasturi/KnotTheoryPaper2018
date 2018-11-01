@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{mystyle}
+\usepackage{graphicx}
+\usepackage{mathtools}
+
+\title{Knot Theory Abstract}
+\author{Shreyas Casturi\\Ana Fishburn}
+\date{5 November 2018}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We start by defining Legendrian knots and isotopies of Legendrian knots.
+Then we study the classical invariants of Legendrian knots:
+the topological knot type, the Thurston-Bennequin number, and the rotation number.
+We then explain how, while sufficient for certain classes of knots in tight
+contact structures, there are nonisotopic Legendrian knots with equal
+classical invariants.
+
+In particular, we introduce the Chekanov-Eliashberg DGA, and see that its
+homology, the knot contact homology, is an invariant. We see how this
+can be computed to distinguish versions of the $5_2$ knot with equal classical
+invariants.
+\end{abstract}
+
+\section{Introduction}
+A {\it contact structure} on $\R^3$ is a method of placing a plane at every point,
+such that these planes satisfy certain technical conditions.
+There are various distinct contact structures we could use, some of them giving
+very different properties.
+However, for this paper, we will exclusively consider the standard contact structure:
+At every point in $\R^3$, we consider the plane spanned by
+\[\left\{\frac{\partial}{\partial y},\frac{\partial}{\partial x} + y\frac{\partial}{\partial z}\right\}.\]
+Visually, we can see that these planes are always tangent to the $y$-axis, but also
+twist around once when moving from $y = -\infty$ to $y = \infty$.
+
+Now that we have this contact structure, we can define a {\it Legendrian knot}
+as a knot that is at every point tangent to the plane at that point.
+In particular, if we look at the tangent vector $v$ to $K$ at a point $p = (x,y,z)$,
+then
+\[ v = A\frac{\partial}{\partial y} + B\left(\frac{\partial}{\partial x} +y\frac{\partial}{\partial z}\right)\]
+for some real numbers $A$ and $B$.
+We can equivalently formulate this condition using a parametrization of $K$ as
+the image of $\phi(t) = (x(t),y(t),z(t))$:
+\[ z'(t)-y(t)x'(t) = 0.\]
+
+We now define what it means for two Legendrian knots to be equivalent:
+Two Legendrian knots
+
+\section{Classical Invariants}
+
+\section{Chekanov-Eliashberg DGA}
+
+\begin{thebibliography}{9}
+\bibitem{etnyre}
+    J. Etnyre,
+    \textit{Legendrian and Transversal Knots},
+    from: Handbook of Knot Theory,
+    Elsevier B. V.,
+    Amsterdam (2005).
+
+\bibitem{sabloffRulings}
+    J. Sabloff,
+    \textit{Augmentations and Rulings of Legendrian Knots},
+    Int. Math. Res. Not. (2005) 1157-1180.
+
+\bibitem{sabloffAMS}
+    J. Sabloff,
+    \textit{What Is $\ldots$ a Legendrian Knot?},
+    AMS Notices, 56 (2009), no. 10, 1282-1284.
+\end{thebibliography}
+
+\end{document}
