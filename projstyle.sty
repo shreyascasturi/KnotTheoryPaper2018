@@ -1,0 +1,48 @@
+\ProvidesPackage{mystyle}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amssymb}%,nmathptmx}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+%\usepackage{fullpage}
+\usepackage{diagrams}
+\usepackage{multicol}
+%These settings give 45 char/ln with 2 column, and 93 char/ln with one (without fullpage
+%
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Po}{\mathbb{P}}
+\newcommand{\ssep}{\mid}
+\let\emptyset\varnothing
+
+\newcounter{theorem_num}
+\setcounter{theorem_num}{1}
+\newenvironment{theorem}[1][Theorem]{\begin{trivlist}
+  \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries \arabic{theorem_num}.}]}{\end{trivlist}\addtocounter{theorem_num}{1}}
+
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+  \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+  \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newcounter{problem_num}
+\setcounter{problem_num}{1}
+\newenvironment{problem}[1][Problem]{\begin{trivlist}
+  \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries \arabic{problem_num}.}]}{\end{trivlist}\addtocounter{problem_num}{1}}
+
+\newenvironment{question}[2][Question]{\begin{trivlist}
+  \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+  \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{example}[2][Example]{\begin{trivlist}
+  \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{definition}[2][Definition.]{\begin{trivlist}
+  \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\setlength\parindent{10pt}
+\setlength\parskip{10pt}
