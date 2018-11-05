@@ -44,7 +44,7 @@ then
 \[ v = A\frac{\partial}{\partial y} + B\left(\frac{\partial}{\partial x} +y\frac{\partial}{\partial z}\right)\]
 for some real numbers $A$ and $B$.
 We can equivalently formulate this condition using a parametrization of $K$ as
-the image of $\phi(t) = (x(t),y(t),z(t))$:
+the image of a smooth embedding $\phi : [0,1] \to \R^3$, where $\phi(t) = (x(t),y(t),z(t))$ satisfies
 \[ z'(t)-y(t)x'(t) = 0.\]
 
 We can now say that two Legendrian knots are equivalent if they can be related by a continuous
@@ -62,15 +62,37 @@ our choice of coordinates, dealing with projections of Legendrian knots will
 be more complicated than with smooth knots.
 
 The first method of projecting Legendrian knots is the {\it front projection}.
-This is the projection into the $xz$-plane. From the differential equation
-$z'(t) = y(t)x'(t)$, we can glean the following two properties of front projections:
+This is the projection onto the $xz$-plane. From the differential equation
+$z'(t) = y(t)x'(t)$, we see that we can recover the $y$ coordinate from the front
+projection by
+\[y(t) = \lim_{t_0\to t}\frac{z'(t)}{x'(t)}.\]
+We find the following two properties of front projections:
 \begin{enumerate}[label=\roman*)]
 \item There may be no vertical tangencies: if $x'(t)$ vanishes, so does $z'(t)$. Instead we 
 allow {\it cusps}, points where the diagram forms a sharp horizontal point.
-\item At each crossing, the over strand has greater slope than the under strand.
+\item At each crossing, the under strand has greater slope than the over strand.
 \end{enumerate}
-It turns out that these conditions completely characterize front projections, and
-that we can arrange for the set of cusp points to be finite.
+It turns out that these conditions completely characterize front projections:
+if $(x(t),z(t))$ satisfies these conditions, they are the coordinates of a Legendrian knot.
+Furthermore, for any Legendrian knot, we can arrange for the set of cusp points to be finite.
+
+We can take a projection of a smooth knot and convert it into the front
+projection of a Legendrian knot by rotating each crossing until the under
+strand has greater slope, and then
+replacing vertical tangencies with cusps. We have therefore proved
+\begin{theorem}
+Every smooth knot may be realized as a Legendrian knot.
+\end{theorem}
+
+We now consider the harder to work with, but just as essential, {\it Lagrangian projection}.
+This is the projection onto the $xy$-plane. This time, we must recover the $z$ coordinate
+by integrating, so up to a constant $z_0$, we have
+\[ z(t) = z_0 + \int_0^t y(s)x'(s)\,ds.\]
+Now $(x(t),y(t))$ will provide a valid $z(t)$ if and only if
+\begin{enumerate}[label=\roman*)]
+\item $\int_0^1 y(s)x'(s)\,ds = 0$.
+\item $\int_{t_1}^{t_2} y(s)x'(s)\,ds \neq 0$ whenever $(x(t_1),y(t_1))=(x(t_2),y(t_2))$.
+\end{enumerate}
 
 \section{Classical Invariants}
 
