@@ -2,8 +2,9 @@
 \usepackage{projstyle}
 \usepackage{graphicx}
 \usepackage{mathtools}
+\usepackage{enumitem}
 
-\title{Knot Theory Abstract}
+\title{A Brief Introduction to Legendrian Knots}
 \author{Shreyas Casturi\\Ana Fishburn}
 \date{5 November 2018}
 
@@ -46,8 +47,30 @@ We can equivalently formulate this condition using a parametrization of $K$ as
 the image of $\phi(t) = (x(t),y(t),z(t))$:
 \[ z'(t)-y(t)x'(t) = 0.\]
 
-We now define what it means for two Legendrian knots to be equivalent:
-Two Legendrian knots
+We can now say that two Legendrian knots are equivalent if they can be related by a continuous
+family of Legendrian knots. This is very similar to the definition of equivalence
+for smooth knots, only here, we restrict the allowable motions.
+Therefore, Legendrian equivalence is a finer relation than smooth knot equivalence,
+and, in fact, we will show that there are many Legendrian inequivalent knots
+with the same smooth knot type.
+
+\section{Projections}
+Before we can discuss invariants of Legendrian knots, we must first understand
+the ways to visually represent them.
+Because Legendrian knots rely on our choice of contact structure, and therefore
+our choice of coordinates, dealing with projections of Legendrian knots will
+be more complicated than with smooth knots.
+
+The first method of projecting Legendrian knots is the {\it front projection}.
+This is the projection into the $xz$-plane. From the differential equation
+$z'(t) = y(t)x'(t)$, we can glean the following two properties of front projections:
+\begin{enumerate}[label=\roman*)]
+\item There may be no vertical tangencies: if $x'(t)$ vanishes, so does $z'(t)$. Instead we 
+allow {\it cusps}, points where the diagram forms a sharp horizontal point.
+\item At each crossing, the over strand has greater slope than the under strand.
+\end{enumerate}
+It turns out that these conditions completely characterize front projections, and
+that we can arrange for the set of cusp points to be finite.
 
 \section{Classical Invariants}
 
