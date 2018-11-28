@@ -93,6 +93,109 @@
 \frametitle{Properties of the Lagrangian Projection}
 \end{frame}
 
-\section{Classical Invariants}
+\begin{frame}
+    \frametitle{On Classical Invariants}
+    We consider the idea of an \textit{knot invariant}, and wish to
+    apply this idea to \textit{Legendrian knots.}
+
+    There are three invariants we will be discussing:
+    \begin{itemize}
+        \item \textit{The Topological Knot Type}
+        \item \textit{The Thurston-Bennequin Number}
+        \item \textit{The Rotation Number}
+    \end{itemize}
+    \alert{NOTE}: We will consider in the following slides knots
+    that have an \textit{orientation}.
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Topological Knot Type}
+    One invariant (or collection of invariants) we can consider
+    is those invariants for \textit{smooth knots}. \\
+    That is, we may consider our projections of the Legendrian knots
+    as projections of smooth knots, and see what invariants hold
+    between these "smooth" knots. \\
+    The \textit{topological knot type} is then the type of knot we find
+    when we consider the knots as a \textit{smooth} knots and not as 
+    \textit{Legendrian} knots. \\
+   
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Thurston-Bennequin Invariant}
+    \begin{definition}
+    This invariant measures the degree of twisting (twisting of planes)
+    around our given Legendrian knot, which we denote as $L.$
+\end{definition}
+The formal definition involves heavy usage of geometrical concepts,
+so we'll revert to a combinatorial, calculation-based method of
+obtaining this invariant.
+\end{frame}
+\begin{frame}
+    \frametitle{An Example of Calculating TB (Front)}
+    For a \textit{front} projection:
+    \begin{itemize}
+        \item There are two things we must calculate:
+        \begin{itemize}
+            \item The \textit{writhe} number of the knot projection.
+            \item The number of \textit{cusps} the knot projection has.
+        \end{itemize}
+    \end{itemize}
+    The formula for a \textit{front} projection:
+    \[tb(L) = writhe(\Pi(L)) - \frac{1}{2}(cusps)\]
+    There are two things we must calculate for a \textit{Legendrian knot}:
+\end{frame}
+
+\begin{frame}
+    \frametitle{An Example of Calculating TB (Lagrangian)}
+    For a \textit{Lagrangian} projection, we need only the \textit{writhe}
+    number of the projection. \\
+    The formula is literally:
+    \[tb(L) = writhe(\pi(L))\].
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Rotation Number}
+    \begin{definition}
+        The \alert{winding number} of a curve around some given point
+        is the number of times the curve travels \textit{counterclockwise}
+        around the point.
+    \end{definition}
+
+    \begin{definition}
+        The \alert{rotation number} is the winding number of a \textit{Legendrian
+          knot}. The point to travel around is the origin of $\mathbb{R^2}.$
+    \end{definition}
+    As with $tb$, the reasoning of why the rotation number is the winding
+    number involves higher-level geometric concepts, so we'll defer
+    to a calculation to explain the rotation number.
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Calculating Rotation Number}
+    With a \textit{front projection}:
+    \begin{itemize}
+        \item{We need the amount of \textit{down} cusps a projection has, denoted
+        as \textit{D}.}
+      \item{We also need the amount of \textit{up} cusps a projection has,
+      denoted as \textit{U}.}
+    \end{itemize}
+    With this, our formula is:
+    \[r(L) = \frac{1}{2}(D - U).\]
+    With a \textit{Lagrangian projection}:
+    \[r(L) = winding(\pi(L)).\]
+    \alert{NOTE}: The orientation can change the sign of the rotation number.
+\end{frame}
+
+\begin{frame}
+    \frametitle{An Example of Calculating Rotation Number}
+    Insert diagram here.
+\end{frame}
+
+
+     
+    
+
 
 \end{document}
