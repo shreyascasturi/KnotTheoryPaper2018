@@ -30,7 +30,8 @@
     plane at that point given by the contact structure.
     \end{definition}
 
-    We can use coordinates: if $K$ is the image of $t \mapsto (x(t),y(t),z(t))$, then $K$
+    More concretely: if $K$ is the image of $\phi : [0,1] \to \R^3$ given in coordinates by
+    $t \mapsto \phi(x(t),y(t),z(t))$, then $K$
     is Legendrian if for all $t$,
     \[ z'(t) - y(t)x'(t) = 0. \]
 \end{frame}
@@ -54,22 +55,23 @@
     we need diagrams that respect the contact structure.
 
     \begin{definition}
-    The \alert{front projection} of a Legendrian knot $K$ is the projection
+    The \alert{front projection}, denoted \alert{$\Pi(K)$}, of a Legendrian knot $K$ is the projection
     into the $xz$-plane.
     \end{definition}
 
     \begin{definition}
-    The \alert{Lagrangian projection} of a Legendrian knot $K$ is the projection
+    The \alert{Lagrangian projection}, denoted \alert{$\pi(K)$}, of a Legendrian knot $K$ is the projection
     into the $xy$-plane.
     \end{definition}
 \end{frame}
 
 \begin{frame}
     \frametitle{Properties of the Front Projection}
-    To determine what properties front projections must have, look at the
-    formula $x'(t) - y(t)z'(t) = 0$.
+    We solve the equation $z'(t) - y(t)x'(t) = 0$ for $y$:
+    \[ y(t) = \lim_{s\to t} \frac{z'(s)}{x'(s)}. \]
+
     \begin{itemize}
-    \item No vertical tangencies are allowed: if $z'(t) = 0$, then $x'(t)$ is also zero.
+    \item No vertical tangencies are allowed: if $z'(t) = 0$, then $x'(t)$ must also be zero.
     Instead, we allow \alert{cusps}, where the diagram makes a sharp horizontal point.
     \item At each crossing, the under strand has greater slope than the over strand.
     \end{itemize}
@@ -90,7 +92,23 @@
 \end{frame}
 
 \begin{frame}
+    \frametitle{Reidemeister Theorem for Front Projections}
+    \begin{theorem}
+        Two front projections represent equivalent Legendrian knots if and only if
+        they can be related by a sequence of the following moves:
+    \end{theorem}
+\end{frame}
+
+\begin{frame}
 \frametitle{Properties of the Lagrangian Projection}
+    This time, we solve the equation $z'(t) - y(t)x'(t) = 0$ for $z$:
+    \[ z(t) = z_0 + \int_0^t y(s)x'(s)\,ds, \]
+    so we can always recover the $z$ coordinate (up to translation) from $\pi(K)$.
+
+    \begin{itemize}
+    \item $\int_0^1 y(s)x'(s)\,ds = 0$.
+    \item $\int_{t_1}^{t_2}y(s)x'(s)\,ds \neq 0$ whenever $(x(t_1),y(t_1))=(x(t_2),y(t_2))$.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
