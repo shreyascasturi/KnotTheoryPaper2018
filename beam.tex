@@ -32,19 +32,65 @@
 
     We can use coordinates: if $K$ is the image of $t \mapsto (x(t),y(t),z(t))$, then $K$
     is Legendrian if for all $t$,
-    \[ z'(t) - y(t)x'(t) = 0 \]
+    \[ z'(t) - y(t)x'(t) = 0. \]
 \end{frame}
 
 \begin{frame}
     \frametitle{Equivalences of Legendrian Knots}
     Two Legendrian knots are equivalent if there is a continuous family of Legendrian
-    knots between them. This is similar to the definition of smooth knot equivalence.
+    knots between them. This is similar to the definition of smooth knot equivalence,
+    only with the allowable motions restricted.
+
+    \begin{theorem}
+    If two Legendrian knots are Legendrian equivalent, then they are equivalent as smooth knots.
+    \end{theorem}
 \end{frame}
 
 \section[Proj]{Projections of Legendrian Knots}
 
 \begin{frame}
-\frametitle{This is the last slide}
+    \frametitle{Projections of Legendrian Knots}
+    If we want to have clear visual representations of Legendrian knots,
+    we need diagrams that respect the contact structure.
+
+    \begin{definition}
+    The \alert{front projection} of a Legendrian knot $K$ is the projection
+    into the $xz$-plane.
+    \end{definition}
+
+    \begin{definition}
+    The \alert{Lagrangian projection} of a Legendrian knot $K$ is the projection
+    into the $xy$-plane.
+    \end{definition}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Properties of the Front Projection}
+    To determine what properties front projections must have, look at the
+    formula $x'(t) - y(t)z'(t) = 0$.
+    \begin{itemize}
+    \item No vertical tangencies are allowed: if $z'(t) = 0$, then $x'(t)$ is also zero.
+    Instead, we allow \alert{cusps}, where the diagram makes a sharp horizontal point.
+    \item At each crossing, the under strand has greater slope than the over strand.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Converting Smooth Knots into Legendrian Knots}
+    Taking any diagram of a smooth knot, we can get a valid front diagram for a Legendrian
+    knot by the following procedure:
+    \begin{itemize}
+    \item Rotate the diagram around each crossing until the under strand has greater slope.
+    \item Convert every vertical tangency into a cusp.
+    \end{itemize}
+    \begin{theorem}
+        For any smooth knot $K$, there is a Legendrian knot $K'$, such that $K$ and $K'$ are
+        equivalent as smooth knots.
+    \end{theorem}
+\end{frame}
+
+\begin{frame}
+\frametitle{Properties of the Lagrangian Projection}
 \end{frame}
 
 \section{Classical Invariants}
