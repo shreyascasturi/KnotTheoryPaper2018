@@ -1,6 +1,7 @@
 \documentclass{beamer}
 %\usepackage{projstyle}
 \newcommand{\R}{\mathbb{R}}
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -63,6 +64,7 @@
     The \alert{Lagrangian projection}, denoted \alert{$\pi(K)$}, of a Legendrian knot $K$ is the projection
     into the $xy$-plane.
     \end{definition}
+    \includegraphics[height=2cm]{piPi.jpg}
 \end{frame}
 
 \begin{frame}
@@ -89,6 +91,7 @@
         For any smooth knot $K$, there is a Legendrian knot $K'$, such that $K$ and $K'$ are
         equivalent as smooth knots.
     \end{theorem}
+    \includegraphics[height=2cm]{smoothToLegendrian.jpg}
 \end{frame}
 
 \begin{frame}
@@ -97,6 +100,9 @@
         Two front projections represent equivalent Legendrian knots if and only if
         they can be related by a sequence of the following moves:
     \end{theorem}
+    \begin{center}
+    \includegraphics[height=5cm]{Redemeister.jpg}
+    \end{center}
 \end{frame}
 
 \begin{frame}
@@ -112,11 +118,12 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{On Classical Invariants}
-    We consider the idea of an \textit{knot invariant}, and wish to
-    apply this idea to \textit{Legendrian knots.}
+    \frametitle{Classical Invariants}
+    We now consider \alert{Legendrian knot invariants}, which, similarly to smooth
+    knot invariants, are functions from the set equivalence classes of Legendrian
+    knots.
 
-    There are three invariants we will be discussing:
+    There are three classical invariants we will be discussing:
     \begin{itemize}
         \item \textit{The Topological Knot Type}
         \item \textit{The Thurston-Bennequin Number}
@@ -127,30 +134,31 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{The Topological Knot Type}
-    One invariant (or collection of invariants) we can consider
-    is those invariants for \textit{smooth knots}. \\
-    That is, we may consider our projections of the Legendrian knots
-    as projections of smooth knots, and see what invariants hold
-    between these "smooth" knots. \\
-    The \textit{topological knot type} is then the type of knot we find
-    when we consider the knots as a \textit{smooth} knots and not as 
-    \textit{Legendrian} knots. \\
-   
+    \frametitle{Topological Knot Type}
+    Because two Legendrian equivalent knots are automatically equivalent
+    as smooth knots, we have the following invariant:
+    \begin{definition}
+        The \alert{topological knot type} of a Legendrian knot $L$ is $k(L)$,
+        the equivalence class of all knots smoothly equivalent to $L$.
+    \end{definition}
+    For example the following two front diagrams give inequivalent Legendrian knots,
+    because one is an unknot while the other is a figure-eight.
+
+    \includegraphics[height=2cm]{notEq.jpg}
 \end{frame}
 
 \begin{frame}
-    \frametitle{The Thurston-Bennequin Invariant}
-    \begin{definition}
-    This invariant measures the degree of twisting (twisting of planes)
-    around our given Legendrian knot, which we denote as $L.$
-\end{definition}
-The formal definition involves heavy usage of geometrical concepts,
-so we'll revert to a combinatorial, calculation-based method of
-obtaining this invariant.
+    \frametitle{Thurston-Bennequin Invariant}
+    Geometrically, the \alert{Thurston-Bennequin number} of a Legendrian knot $L$
+    measures how much the contact planes "twist" around $L$.
+
+    We write the Thurston-Bennequin number as \alert{$tb(L)$}.
+    The full definition requires some heavy geometry, so we give
+    effective definitions in terms of the projections of $L$.
 \end{frame}
+
 \begin{frame}
-    \frametitle{An Example of Calculating TB (Front)}
+    \frametitle{Calculating $tb(L)$ Using Front Projections}
     For a \textit{front} projection:
     \begin{itemize}
         \item There are two things we must calculate:
@@ -159,34 +167,44 @@ obtaining this invariant.
             \item The number of \textit{cusps} the knot projection has.
         \end{itemize}
     \end{itemize}
-    The formula for a \textit{front} projection:
-    \[tb(L) = writhe(\Pi(L)) - \frac{1}{2}(cusps)\]
-    There are two things we must calculate for a \textit{Legendrian knot}:
+    The formula for a front projection is
+    \[tb(L) = writhe(\Pi(L)) - \frac{1}{2}(cusps).\]
+    \begin{center}
+    \includegraphics[height=3cm]{tbFront.jpg}
+    \end{center}
 \end{frame}
 
 \begin{frame}
-    \frametitle{An Example of Calculating TB (Lagrangian)}
+    \frametitle{Infinitely Many Non-equivalent Legendrian Knots}
+    Given a front projection of $L$, we can always perform the following
+    procedure to decrease its $tb$ number by 1:
+    \begin{center}
+    \includegraphics[height=2cm]{infKnots.jpg}
+    \end{center}
+    \begin{theorem}
+    For any smooth knot $K$, there are infinitely many non-equivalent
+    Legendrian knots with $K$ as their topological knot type.
+    \end{theorem}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Calculating $tb(L)$ Using Lagrangian Projections}
     For a \textit{Lagrangian} projection, we need only the \textit{writhe}
     number of the projection. \\
-    The formula is literally:
-    \[tb(L) = writhe(\pi(L))\].
+    The formula is simply
+    \[tb(L) = writhe(\pi(L)).\]
+    \begin{center}
+    \includegraphics[height=4cm]{tbLagr.jpg}
+    \end{center}
 \end{frame}
 
-\begin{frame}
-    \frametitle{The Rotation Number}
-    \begin{definition}
-        The \alert{winding number} of a curve around some given point
-        is the number of times the curve travels \textit{counterclockwise}
-        around the point.
-    \end{definition}
 
-    \begin{definition}
-        The \alert{rotation number} is the winding number of a \textit{Legendrian
-          knot}. The point to travel around is the origin of $\mathbb{R^2}.$
-    \end{definition}
-    As with $tb$, the reasoning of why the rotation number is the winding
-    number involves higher-level geometric concepts, so we'll defer
-    to a calculation to explain the rotation number.
+\begin{frame}
+    \frametitle{Rotation Number}
+    The \alert{rotation number}, denoted \alert{$r(L)$}, of $L$ describes how
+    much $L$ twists inside of the contact planes.
+    Again, the geometric definition is elaborate, so we will describe the
+    methods of effectively computing $r(L)$.
 \end{frame}
 
 
@@ -201,14 +219,16 @@ obtaining this invariant.
     \end{itemize}
     With this, our formula is:
     \[r(L) = \frac{1}{2}(D - U).\]
-    With a \textit{Lagrangian projection}:
-    \[r(L) = winding(\pi(L)).\]
-    \alert{NOTE}: The orientation can change the sign of the rotation number.
+    \alert{NOTE}: Swapping the orientation will swap the sign of the rotation number,
+    so $|r(L)|$ is the proper invariant for unoriented Legendrian knots.
 \end{frame}
 
 \begin{frame}
-    \frametitle{An Example of Calculating Rotation Number}
-    Insert diagram here.
+    \frametitle{Beyond the Classical Invariants}
+    It turns out that these three invariants, $k(L)$, $tb(L)$, and $r(L)$
+    are not sufficient to classify Legendrian knots. For example, these
+    two Legendrian $5_2$ knots have the same $tb$ and $r$, and some very
+    sophisticated tools are needed to tell them apart.
 \end{frame}
 
 
