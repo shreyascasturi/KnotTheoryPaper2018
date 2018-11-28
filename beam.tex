@@ -15,15 +15,30 @@
 \begin{frame}
     \frametitle{Contact Structures}
     \begin{definition}
-    A \alert{contact structure} on $\R^3$ is a plane bundle
-    satisfying certain technical conditions.
+    A \alert{contact structure} on $\R^3$ is a method of assigning a plane
+    to every point, such that these planes satisfy certain technical conditions.
     \end{definition}
 
-    The \alert{standard contact structure} is 
+    Throughout, we will only consider the \alert{standard contact structure}, which
+    twists along the $y$-axis:
 \end{frame}
 
 \begin{frame}
-\frametitle{This is another slide}
+\frametitle{Legendrian Knots}
+    \begin{definition}
+    A \alert{Legendrian knot} $K$ is a smooth knot which is, at every point, parallel to the
+    plane at that point given by the contact structure.
+    \end{definition}
+
+    We can use coordinates: if $K$ is the image of $t \mapsto (x(t),y(t),z(t))$, then $K$
+    is Legendrian if for all $t$,
+    \[ z'(t) - y(t)x'(t) = 0 \]
+\end{frame}
+
+\begin{frame}
+    \frametitle{Equivalences of Legendrian Knots}
+    Two Legendrian knots are equivalent if there is a continuous family of Legendrian
+    knots between them. This is similar to the definition of smooth knot equivalence.
 \end{frame}
 
 \section[Proj]{Projections of Legendrian Knots}
@@ -31,5 +46,7 @@
 \begin{frame}
 \frametitle{This is the last slide}
 \end{frame}
+
+\section{Classical Invariants}
 
 \end{document}
