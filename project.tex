@@ -18,8 +18,6 @@ Then we study the classical invariants of Legendrian knots:
 the topological knot type, the Thurston-Bennequin number, and the rotation number.
 We then explain how, while sufficient for certain classes of knots in tight
 contact structures, there are nonisotopic Legendrian knots with equal
-classical invariants.
-
 In particular, we introduce the Chekanov-Eliashberg DGA, and see that its
 homology, the knot contact homology, is an invariant. We see how this
 can be computed to distinguish versions of the $5_2$ knot with equal classical
@@ -95,8 +93,65 @@ Now $(x(t),y(t))$ will provide a valid $z(t)$ if and only if
 \end{enumerate}
 
 \section{Classical Invariants}
+We now discuss the classical invariants related to Legendrian knots.  Given that a Legendrian
+isotopy between two Legendrian knots is, at its core, an isotopy of the underlying knots, then the first
+major invariant of the Legendrian knot is the \textit{topological knot type}, here donated as
+$k(L).$ This is a rather intuitive notion.
 
+The second major invariant is known as the \textit{Thurston-Bennequin invariant}, which essentially
+measures how much coiling a given Legendrian knot has. Legendrian knots have what is called the
+\textit{right cusp number}, essentially a measure of how many local right-cusps there are in its knot diagram.
+These knots also have a quality known as the \textit{writhe } number, which is a measure of
+counting the knot diagram's crossings, but only counting those crossings that have signs. To calculate
+the maximal Thurston-Bennequin number, one can simply subtract the \textit{writhe} - \textit{right cusp number}.
+
+This number calculated is the invariant. 
+According to the Knot Atlas, the Thurston-Bennequin invariant is not just this number, but rather
+the maximum number of a set of two numbers - the two maximal Thurston-Bennequin numbers
+calculated for both the original knot diagram and its mirror. 
+
+Rigorously speaking, following in Etnyre's footsteps, we may define the Thurston-Bennequin invariant
+by using the idea of a bundle and its trivialization. Here, we denote a bundle as a \textit{vector bundle},
+a collection of vector spaces that are parameterized by another space. Let us denote a normal, or perpendicular
+bundle of a Legendrian knot $L$ by $v$. A \textit{trivialization} of $v$ is given as identifying $v$ with
+$L \cdot \mathbb{R}^{2}$ (I use \textit{cdot} because I could not find a good symbol for the product).
+Legendrian knots have what are called \textit{line bundles}, which use a Legendrian knot's canonical framing
+to give a framing of $v$ ove $L$.
+
+Given some normal bundle, we define a number $tw$ as the twisting of $l$ with respect to a
+normal bundle's \textit{preassigned} framing. If $L$ is null-homologous, then $L$ has
+a framing given by a Seifert surface, and the twisting of $L$ with respect to this surface
+is known as the Thurston-Bennequin invariant of $L$, and is denoted as $tb(L).$
+
+We now come to the last classical invariant: \textit{rotation number}. We define 
+this invariant only for null-homologous knots.
+We assume that $L$ has an embedded, orientable surface. When the contact planes
+for this knot are restricted only to those planes that intersect this surface create
+a trivialization by giving a two-dimensional bundle - as Etnyre states, over a surface with boundary,
+in this case the embedded, orientable surface, any orientable two plane bundle is trivial. Given this
+trivialization, we acquire another trivialization which is the product of $L$ and $\mathbb{R}^{2.}$
+If we denote a non-zero vector field $v$ as one tangent to $L$, pointing in the direction of the orientation given on $L$,
+we can imagine $v$ as a path of vectors in $\mathbb{R}^{2}$, then we realize there is a \textit{winding number} for these vectors,
+and this \textit{winding number} is the rotation number of $L.$ Given that we used the orientation of L in determinng \textit{rotation number},
+we can say the \textit{rotation number} is dependent upon the orientation of $L$ and will accordingly change signs if there is a change in
+orientation.
+
+We have, in a non-rigorous way, defined our three classical invariants. We now want to find the calculation of the \textit{rotation number}
+as an end to this section.
+
+We have to simply find how many times a non-zero tangent vector field $v$ that is in $\mathbb{R}^{2}$ goes, or winds, around
+the origin of $\mathbb{R}^{2}$. This involves making a count of how many times our trivialization and $v$ point in the same direction/
+are oriented the same way; this of course creates an intersection between $v$ and our trivialization. We determine the sign
+at each intersection by figuring out if $v$ passes the trivialization clockwise or counter-clockwise ($1, -1$, respectively).
+We then notice that the down and up cusps of our diagram also show whether an intersection will be positive or negative,
+and as this counts the number of times $v$ intersects our trivialization, we just need to divide by two.
+So the formula is:
+\[r(L) = \frac{1}{2}(D - U) \]
+We conclude the rough draft here.
 \section{Chekanov-Eliashberg DGA}
+
+\textit{This will be added in later, and is not part of the rough draft.}
+
 
 \begin{thebibliography}{9}
 \bibitem{etnyre}
