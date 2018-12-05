@@ -38,11 +38,20 @@ very different properties.
 However, for this paper, we will exclusively consider the standard contact structure:
 At every point in $\R^3$, we consider the plane spanned by
 \[\left\{\frac{\partial}{\partial y},\frac{\partial}{\partial x} + y\frac{\partial}{\partial z}\right\}.\]
+
+Let us show this with an example of the planes:
+
+\begin{figure}[h!]
+    \includegraphics[width=\linewidth]{cStructure.png}
+    \caption{An example of a contact structure in $\mathbb{R}^3$}
+    \label{fig:knot1}
+\end{figure}
+
 Visually, we can see that these planes are always tangent to the $y$-axis, but also
 twist around once when moving from $y = -\infty$ to $y = \infty$.
 
 Now that we have this contact structure, we can define a {\it Legendrian knot}
-as a knot that is at every point tangent to the plane at that point.
+as a knot that is at every point tangent to the plane at that point \cite{sabloffAMS}.
 In particular, if we look at the tangent vector $v$ to $K$ at a point $p = (x,y,z)$,
 then
 \[ v = A\frac{\partial}{\partial y} + B\left(\frac{\partial}{\partial x} +y\frac{\partial}{\partial z}\right)\]
@@ -115,7 +124,7 @@ them. This is analogous to smooth knot equivalence, though in our case,
 the motions/moves allowed to turn one knot into another are restricted,
 due to the presence of the contact structure framework.
 
-With this idea in mind, we develop a theorem:
+With this idea in mind, we have this theorem:
 \begin{theorem}
     If two Legendrian knots are Legendrian equivalent, then they are
     equivalent as smooth knots.
@@ -123,7 +132,7 @@ With this idea in mind, we develop a theorem:
 
 That is, we may consider their projections not as Lagrangian or front
 projections, but simply as projections of a smooth knot. If the \textit{Legendrian knots}
-are equivalent, then we can show that they are equivalent as smooth knots.
+are equivalent, then we can show that they are equivalent as smooth knots \cite{etnyre}.
 
 Therefore, if there is an 
 isotopy between two Legendrian knots is, then there is an isotopy of the underlying knot
@@ -159,7 +168,7 @@ neither can their \textit{Legendrian knots} be equivalent.
 In short, \textit{the topological knot type} is an invariant that uses the smooth
 knot type of \textit{Legendrian knot projections} to determine equivalence. If we
 know these types aren't the same, then we can assume that the \textit{Legendrian knots}
-cannot be the same.
+cannot be the same \cite{etnyre}.
 
 \subsection{Thurston-Bennequin Invariant}
 
@@ -172,15 +181,15 @@ Without reverting to a rather geometric definition of this degree, we'll
 calculate this degree of coiling by taking a look at the twin projections
 \textit{Legendrian knots} have.
 
-\textit{Legendrian knots} have what are called \textit{cusps}. Cusps are points
-where the derivative at that point cannot be calculated. That is, the graph/curve
-is not differentiable at that point.
+% \textit{Legendrian knots} have what are called \textit{cusps}. Cusps are points
+% where the derivative at that point cannot be calculated. That is, the graph/curve
+% is not differentiable at that point.
 
-One of the stipulations for a knot to be a \textit{Legendrian knot} is
-that there can be no vertical tangencies. That is, the knot projection cannot
-be differentiable such that the tangent line at a given point is completely
-vertical. In order for this to happen, there must be cusps at such points, so that
-there can be no vertical tangent lines at these points.
+% One of the stipulations for a knot to be a \textit{Legendrian knot} is
+% that there can be no vertical tangencies. That is, the knot projection cannot
+% be differentiable such that the tangent line at a given point is completely
+% vertical. In order for this to happen, there must be cusps at such points, so that
+% there can be no vertical tangent lines at these points.
 
 We have one quality of these knot projections called the \textit{right cusp number},
 the count of how many cusps there are in a given \textit{Legendrian knot} projection.
@@ -192,7 +201,7 @@ and subtracting from that number the number of negatively signed crossings.
 With these two tools, we are ready to calculate the \textit{Thurston-Bennequin number},
 hereby denoted as $tb(L).$
 
-For a given front projection, our formula is:
+For a given front projection, our formula \cite{etnyre} is:
 
 \[tb(L) = writhe(\Pi(L)) - \frac{1}{2}(cusps).\]
 
@@ -215,7 +224,7 @@ is it possible there is a \textit{different} formula for calculating $tb(L)$ usi
 the \textit{Lagrangian} projection of \textit{L}?
 
 Indeed, there is. For a \textit{Lagrangian} projection of L, all we need is the
-\textit{writhe} number for this given knot:
+\textit{writhe} number for this given knot \cite{etnyre}:
 
 \[tb(L) = writhe(\pi(L)).\]
 
@@ -257,7 +266,7 @@ are oriented \textit{upwards} as a result of the orientation of the knot project
 denote these cusps as \textit{U}.
 
 We have all we need to calculate rotation number, denoted $r(L)$, for
-a front projection:
+a front projection \cite{etnyre}:
 
 \[r(L) = \frac{1}{2}(D - U).\]
 
